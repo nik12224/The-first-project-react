@@ -17,7 +17,7 @@ function StarsList({ stars }) {
               </li>
             ))}
           </ul>
-          <Button minWidth={353}>Купить билет</Button>
+          <Button minWidth={353} link="/buy">Купить билет</Button>
         </React.Fragment>
       ) : null}
     </section>
