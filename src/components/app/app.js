@@ -1,8 +1,9 @@
 import React from "react";
-import PageWrapper from "../layout/page-wrapper/page-wrapper.jsx";
-import { GlobalStyle } from "./styles.js";
+import PageWrapper from "../layout/page-wrapper/page-wrapper";
+import gallery from "../../mocks/gallery";
+import { GlobalStyle } from "./styles";
 // import starList from "../../mocks/starList.js";
-import gallery from "../../mocks/gallery.js";
+
 
 
 export default function App() {

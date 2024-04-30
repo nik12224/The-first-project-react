@@ -1,10 +1,10 @@
 import React from "react";
 import CafeGallery from "../blocks/cafe-gallery/cafe-gallery";
 
-function BuyPage({ stars }) {
+function BuyPage({ slides }) {
   return (
     <React.Fragment>
-      <CafeGallery />
+      <CafeGallery slides={slides} />
     </React.Fragment>
   );
 }

@@ -6,10 +6,8 @@ import { defaultTheme } from './components/theme/default';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={defaultTheme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
-  root
+
+  <ThemeProvider theme={defaultTheme}>
+    <App />
+  </ThemeProvider>
 );

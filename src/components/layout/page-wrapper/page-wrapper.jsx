@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header/header";
 import Footer from "../footer/footer";
-import MainPage from "../../pages/main-page";
+// import MainPage from "../../pages/main-page";
 import BuyPage from "../../pages/buy-page";
 import { Main } from "./styles";
 
@@ -11,7 +11,7 @@ function PageWrapper({ ...prop }) {
     <React.Fragment>
       <Header />
       <Main>
-        <BuyPage />
+        <BuyPage {...prop} />
       </Main>
       <Footer />
     </React.Fragment>
