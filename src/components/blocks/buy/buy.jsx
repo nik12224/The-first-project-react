@@ -1,11 +1,14 @@
-import React from "react";
-import { Form, Label } from "../../../components/styled";
+import React, { useState } from "react";
+import { Form, Label, Li, Ul } from "../../../components/styled";
 import Button from "../../ui/button/button";
 import { TitleSize } from "../../ui/title/title";
-import { StyledSection, Price, FormItem, StyleTitle } from "./styles";
+import RadioButton from "../../ui/radio-button/radio-button";
+import { StyledSection, Price, RadioLabelForTime, FormItem, StyleTitle } from "./styles";
 
 // страница покупки
 function Buy({ buyOptions }) {
+  const { durationOptions } = buyOptions;
+  const [duration, setDuration] = useState(durationOptions[0]);
   return (
     <StyledSection>
       <StyleTitle level={1} size={TitleSize.BIG}>
@@ -14,6 +17,21 @@ function Buy({ buyOptions }) {
       <Form $width={540}>
         <FormItem>
           <Label $margin={12}>Продолжительность (часов)</Label>
+          <Ul $isGridList $indent={12} $align="left">
+            {durationOptions.map((option) => (
+              <Li key={option}>
+                <RadioButton
+                  labelComponent={RadioLabelForTime}
+                  selectValue={duration}
+                  value={option}
+                  text={option}
+                  onChange={(el) => {
+                    setDuration(Number(el.target.value));
+                  }}
+                />
+              </Li>
+            ))}
+          </Ul>
         </FormItem>
         <FormItem $bottom={22}>
           <Label $margin={12}>Тип билета</Label>
