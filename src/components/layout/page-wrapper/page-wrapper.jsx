@@ -1,21 +1,20 @@
-import React from "react";
-import Header from "../header/header";
-import Footer from "../footer/footer";
-// import MainPage from "../../pages/main-page";
-import BuyPage from "../../pages/buy-page";
-import { Main } from "./styles";
+import React from 'react'
+import Header from '../header/header'
+import Footer from '../footer/footer'
+import { Main } from './styles'
+import { Outlet } from 'react-router-dom'
 
 // Обёртка для контента страниц
 function PageWrapper({ ...prop }) {
-  return (
-    <React.Fragment>
-      <Header />
-      <Main>
-        <BuyPage {...prop} />
-      </Main>
-      <Footer />
-    </React.Fragment>
-  );
+	return (
+		<React.Fragment>
+			<Header />
+			<Main>
+				<Outlet />
+			</Main>
+			<Footer />
+		</React.Fragment>
+	)
 }
 
-export default PageWrapper;
+export default PageWrapper
